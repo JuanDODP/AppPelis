@@ -12,10 +12,10 @@ const di = Dimensions.get('screen').height;
 interface Props extends StackScreenProps<RootStackParams, 'Detail'> {}
 export const Detail = ({route}: Props) => {
   console.log(route.params?.original_title);
-  const Movie = route.params
+  const Movie = route.params;
   const nom = Movie.original_title;
   const nomEs = Movie.title;
-  console.log(Movie.id)
+  console.log(Movie.id);
   const {cast,isLoading,moviefull}=useMovieDetails(Movie.id);
 
   console.log({moviefull})
